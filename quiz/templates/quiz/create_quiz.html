@@ -1,0 +1,15 @@
+{% extends "quiz/layout.html" %}
+{% block body %}
+<div class="quiz-sended"></div>
+<input type="hidden" name="create_quiz" id="page-name">
+<form action="{% url 'create_quiz' %}" method="post">
+    {% csrf_token %}
+    <textarea name="body" id="body" cols="30" rows="10" placeholder="Enter your question"></textarea>
+    <input type="text" placeholder="Answer 1" class="answers 1" autofocus>
+</form>
+<div class="answer-buttons">
+    <button id="add-answer" type="button">+</button>
+    <button id="remove-answer" type="button">-</button>
+    <button id="send-quiz" type="button">Create</button>
+</div>
+{% endblock %}

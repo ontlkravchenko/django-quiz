@@ -1,0 +1,17 @@
+{% extends "quiz/layout.html" %}
+{% block body %}
+<h2 class="profile-title">{{user.username}}</h2>
+<h3 class="profile-score">Current score: {{user.score}}</h3>
+{% if questions %}
+<h4>All {{user.username}}'s questions:</h4>
+<div class="profile-questions">
+    {% for question in questions %}
+    <div class="profile-question">
+        {{question.question}}
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h4>{{user.username}} did not create any questions yet.</h4>
+{% endif %}
+{% endblock %}

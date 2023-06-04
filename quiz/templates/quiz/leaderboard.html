@@ -1,0 +1,10 @@
+{% extends "quiz/layout.html" %}
+{% block body %}
+<h1>Leaderboard</h1>
+{% for user in users %}
+<a href="{% url 'profile_page' user.id %}" class="user-leaderboard">
+    <h2>{{user.username}}</h2>
+    <h3>Score: {{user.score}}</h3>
+</a>
+{% endfor %}
+{% endblock %}
