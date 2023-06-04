@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static 'quiz/styles.css' %}">
+</head>
+
+<body>
+    <nav>
+        <a href="{% url 'index' %}">Quiz</a>
+        <ul>
+            <li>
+                <a>Leaderboard</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <a>Create Quiz</a>
+            </li>
+            <li>
+                <a>Logout</a>
+            </li>
+            {% else %}
+            <li>
+                <a>Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="body">
+        {% block body %}
+        {% endblock %}
+    </div>
+    <h1>THIS SHIT FINALLY WORKS!!</h1>
+    <script src="{% static 'quiz/main.js' %}"></script>
+</body>
+
+</html>

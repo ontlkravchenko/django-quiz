@@ -1,0 +1,9 @@
+{% extends "quiz/layout.html" %}
+
+{% block body %}
+{% csrf_token %}
+<input type="hidden" name="index" id="page-name">
+<h3 id="error"></h3>
+<div id="error-div"></div>
+
+{% endblock %}
