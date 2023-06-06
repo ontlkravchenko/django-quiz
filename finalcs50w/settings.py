@@ -28,7 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'resume-quiz-django.eba-wzuz2vji.us-west-2.elasticbeanstalk.com',
-    '127.0.0.1']
+    '127.0.0.1',
+    '34.216.32.27',
+    'django-quiz.ontlkravchenko.pp.ua',
+    '172.31.47.209']
 
 
 # Application definition
