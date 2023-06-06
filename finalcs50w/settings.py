@@ -31,7 +31,10 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '34.216.32.27',
     'django-quiz.ontlkravchenko.pp.ua',
-    '172.31.47.209']
+    '172.31.47.209',
+    '44.238.116.78',
+    '52.32.230.249',
+    '54.69.27.96']
 
 
 # Application definition
